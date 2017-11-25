@@ -3,8 +3,8 @@ SF:/Users/stephengeller/Desktop/Projects/tech-tests/compare-the-market/src/prime
 FN:2,(anonymous_0)
 FNF:1
 FNH:1
-FNDA:4,(anonymous_0)
-DA:3,4
+FNDA:5,(anonymous_0)
+DA:3,5
 DA:4,2
 DA:5,2
 DA:6,2
@@ -12,7 +12,7 @@ DA:8,1
 DA:12,1
 LF:6
 LH:6
-BRDA:3,0,0,2
+BRDA:3,0,0,3
 BRDA:3,0,1,2
 BRDA:6,1,0,1
 BRDA:6,1,1,1
