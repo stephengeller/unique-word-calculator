@@ -68,6 +68,3 @@ find at least 20,000 prime numbers.
 
 * Further refactor all classes:
 * Turn it into a website!
-* Give users the option to add mutations before rendering the table. This could
-  be something like multiplying the x axis by 5, or multiplying all numbers by
-  10 etc
