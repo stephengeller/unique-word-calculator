@@ -1,0 +1,19 @@
+{
+  "name": "compare-the-market",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": "test",
+  "jest": {
+    "collectCoverage": true
+  }
+}
