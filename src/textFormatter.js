@@ -7,7 +7,7 @@ class TextFormatter {
     return text.replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ');
   }
 
-  formatText(text) {
+  formatTextToArray(text) {
     return this.splitText(this.removePunctuation(text));
   }
 }

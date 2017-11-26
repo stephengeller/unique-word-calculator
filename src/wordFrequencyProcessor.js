@@ -9,8 +9,9 @@ class WordFrequencyProcessor {
     this.textFormatter = textFormatter;
     this.primeChecker = primeChecker;
   }
+
   processText(text) {
-    const formattedWordArray = this.textFormatter.formatText(text);
+    const formattedWordArray = this.textFormatter.formatTextToArray(text);
     const arrayOfWords = this.addWordsScore(formattedWordArray);
     return this.checkForPrimes(arrayOfWords);
   }

@@ -9,7 +9,7 @@ describe('feature', () => {
       'hello | 3 | true\n' +
       'cool | 4 | false';
     const sampleText =
-      'Hello world; hello! Hello world is so cool, cool cool cool.';
+      'Hello world; hello! H-ello world is so cool, cool cool cool.';
     const userInterface = new UserInterface();
     expect(userInterface.processText(sampleText)).toEqual(finalTable);
   });

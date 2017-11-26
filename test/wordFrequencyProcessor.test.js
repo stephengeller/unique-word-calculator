@@ -3,7 +3,7 @@ const WordFrequencyProcessor = require('../src/wordFrequencyProcessor');
 describe('wordFrequencyProcessor', () => {
   let wordFrequencyProcessor;
   const textFormatter = {
-    formatText: jest.fn(text => text)
+    formatTextToArray: jest.fn(text => text)
   };
   const primeChecker = {
     checkIfPrime: jest.fn()
@@ -28,7 +28,7 @@ describe('wordFrequencyProcessor', () => {
       wordFrequencyProcessor.processText(['hello', 'hello', 'world']);
     });
     it('calls the textFormatter to get words', () => {
-      expect(textFormatter.formatText).toHaveBeenCalledWith([
+      expect(textFormatter.formatTextToArray).toHaveBeenCalledWith([
         'hello',
         'hello',
         'world'

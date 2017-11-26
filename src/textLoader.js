@@ -7,7 +7,7 @@ class TextLoader {
     fsModule = fs,
     pathModule = path,
     utilModule = util,
-    consoleLogger = console.log
+    consoleLogger = console
   ) {
     this.fsModule = fsModule;
     this.pathModule = pathModule;
@@ -15,14 +15,18 @@ class TextLoader {
     this.consoleLogger = consoleLogger;
   }
 
-  getText(filePath) {
+  logToConsole(content) {
+    this.consoleLogger.log(content);
+  }
+
+  getText(directory, filePath) {
     let text = '';
     return this.fsModule.readFileSync(
-      this.pathModule.join(__dirname, filePath),
+      this.pathModule.join(directory, filePath),
       'utf8',
       (err, data) => {
         if (err) {
-          this.consoleLogger(err);
+          this.logToConsole(err);
           process.exit(1);
         }
         return this.utilModule.format(data);

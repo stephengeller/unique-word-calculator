@@ -32,15 +32,20 @@ describe('TextLoader', () => {
 
   describe('#getText', () => {
     beforeEach(() => {
-      textLoader.getText('../src/file');
+      textLoader.getText(__dirname, 'src/file');
     });
     it('calls the fs module to read a file', () => {
       expect(fs.readFileSync).toHaveBeenCalled();
     });
     it('calls the path module to locate the file a file', () => {
-      const srcFolderStringIndex = __dirname.indexOf('/test');
-      const sourceDirectory = __dirname.slice(0, srcFolderStringIndex) + '/src';
-      expect(path.join).toHaveBeenCalledWith(sourceDirectory, '../src/file');
+      expect(path.join).toHaveBeenCalledWith(__dirname, 'src/file');
+    });
+  });
+
+  describe('#logToConsole', () => {
+    it('calls the consoleLogger to print to console', () => {
+      textLoader.logToConsole('hello');
+      expect(consoleMock.log).toHaveBeenCalledWith('hello');
     });
   });
 });

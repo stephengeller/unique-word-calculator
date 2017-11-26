@@ -7,7 +7,7 @@ describe('TextFormatter', () => {
   });
 
   describe('#removePunctuation', () => {
-    it('removes punctuation', () => {
+    it('replaces punctuation with nothing', () => {
       expect(
         textFormatter.removePunctuation('hello! this, is; some punctuation')
       ).toEqual('hello this is some punctuation');
@@ -15,7 +15,7 @@ describe('TextFormatter', () => {
   });
 
   describe('#splitText', () => {
-    it('splits text into array of lowercase words', () => {
+    it('splits text by whitespace into array of lowercase words', () => {
       expect(textFormatter.splitText('HelLLooo WorllldD')).toEqual([
         'helllooo',
         'worllldd'
@@ -23,12 +23,11 @@ describe('TextFormatter', () => {
     });
   });
 
-  describe('#formatText', () => {
+  describe('#formatTextToArray', () => {
     it('returns lowercase array without punctuation', () => {
-      expect(textFormatter.formatText('HelLLooo!! ;;W.orl,lldD')).toEqual([
-        'helllooo',
-        'worllldd'
-      ]);
+      expect(
+        textFormatter.formatTextToArray('HelLLooo!! ;;W.orl,lldD')
+      ).toEqual(['helllooo', 'worllldd']);
     });
   });
 });

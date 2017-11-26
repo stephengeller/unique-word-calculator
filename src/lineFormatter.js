@@ -1,6 +1,6 @@
 class LineFormatter {
   formatLine(object) {
-    return `${object.word} | ${object.count} | ${object.isPrime} `;
+    return `${object.word} | ${object.count} | ${object.isPrime}`;
   }
 
   formatLinesToString(array) {
