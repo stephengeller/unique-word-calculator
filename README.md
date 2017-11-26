@@ -73,6 +73,14 @@ Once this was complete, I then built the more subjective operations for the app,
 such as sorting the table by word frequency, rendering each array object as a
 string and generally formatting the table into a nice display.
 
+I wanted to have one class communicate between the user and the relevant classes
+in order to produce the table. This became the UserInterface class, which has
+many dependencies injected into it in order to format text and produce a table
+of words from it. This approach helps when running feature tests, as you can
+simply expect `userInterface.processText` to produce a specific table at the
+start of development, and keep extracting responsibilities to different classes
+and injecting them into the UserInterface class in order to finally pass it.
+
 I completed this task following TDD and red-green-refactor principles. Each
 failing test was followed by an implementation, which then resulted in
 refactoring of functions either into other smaller functions or classes.

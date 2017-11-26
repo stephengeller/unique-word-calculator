@@ -17,11 +17,10 @@ class WordFrequencyProcessor {
   }
 
   checkForPrimes(arrayOfWords) {
-    const arrayWithPrimes = arrayOfWords.map(word => {
+    return arrayOfWords.map(word => {
       word['isPrime'] = this.primeChecker.checkIfPrime(word.count);
       return word;
     });
-    return arrayWithPrimes;
   }
 
   addWordsScore(array) {
