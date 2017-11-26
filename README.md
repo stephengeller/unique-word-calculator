@@ -103,6 +103,10 @@ object's name, count and "primeness". It calls on the `.toUpperCase` function to
 format each word, and uses a ternary function to determine whether to add
 'Prime!' to each line.
 
+Late in the process, I added functions to detect the biggest word in the text,
+determine its length and add extra whitespace to every word to line the table up
+and have a better display.
+
 #### `TextFormatter`
 
 This class can take a block of text and remove all punctuation from it. Then, it
@@ -157,6 +161,10 @@ find at least 20,000 prime numbers.
   injection, and would like to work on this further.
 * Sort the table further, so that words with the same count are sorted
   alphabetically
+* Refactor each word into an instance of a Word class, as they all have the same
+  attributes. I decided not to do this as each word only housed a few key/value
+  pairs, but it would make sense to create instances of a Word class if each
+  object grew in what they stored (eg more than just its count and "primeness")
 
 ## Note on Git Commits
 
