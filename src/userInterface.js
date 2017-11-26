@@ -15,7 +15,7 @@ class UserInterface {
     this.logger = logger;
   }
 
-  processText(string) {
+  getUniqueWordTable(string) {
     const processedText = this.wordFrequencyProcessor.processText(string);
     const sortedText = this.sortWordsByCount(processedText);
     return this.renderTable(sortedText);

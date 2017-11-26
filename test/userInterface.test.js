@@ -22,9 +22,9 @@ describe('userInterface', () => {
     );
   });
 
-  describe('#processText', () => {
+  describe('#getUniqueWordTable', () => {
     beforeEach(() => {
-      userInterface.processText(
+      userInterface.getUniqueWordTable(
         'Hello world! What a beautiful thing it is to say, hello word. What a thing indeed...'
       );
     });

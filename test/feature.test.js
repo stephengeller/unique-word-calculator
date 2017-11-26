@@ -11,6 +11,6 @@ describe('feature', () => {
     const sampleText =
       'Hello world; hello! H-ello world is so cool, cool cool cool.';
     const userInterface = new UserInterface();
-    expect(userInterface.processText(sampleText)).toEqual(finalTable);
+    expect(userInterface.getUniqueWordTable(sampleText)).toEqual(finalTable);
   });
 });
