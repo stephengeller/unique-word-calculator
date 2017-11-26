@@ -1,4 +1,4 @@
-# Book Analyser
+# Unique Word Calculator
 
 A command-line app.
 
@@ -13,8 +13,8 @@ root directory of this project!
 
 ## How to use
 
-All you have to do is run the app with node in your terminal, and input the
-numer of primes you want to multiply!
+To run the app, you will need to be in the repository directory in your
+terminal.
 
 You can choose between generating a table off a small sample of a book or the
 full thing! Either type `node runFull.js` for the full book or `node
@@ -59,7 +59,7 @@ see all of the beautiful (passing) tests.
 
 * All tests passing
 * 95% test coverage (100% on all besides a callback function within the
-  TextLoader class, which I don't know how to test the different outcomes yet.)
+  TextLoader class, which I don't know how to test the different outcomes yet)
 
 ## My approach
 
