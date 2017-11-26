@@ -24,7 +24,7 @@ For example: In your terminal, within the repository directory:
 
 ```bash
 $ node runSample.js
-...  # (the table continues for longer in the actual app)
+# (the table continues for longer in the actual app)
  PETER | 100
 MOTHER | 111
    HAD | 113 | Prime!
@@ -79,9 +79,10 @@ I wanted to have one class communicate between the user and the relevant classes
 in order to produce the table. This became the UserInterface class, which has
 many dependencies injected into it in order to format text and produce a table
 of words from it. This approach helps when running feature tests, as you can
-simply expect `userInterface.processText` to produce a specific table at the
-start of development, and keep extracting responsibilities to different classes
-and injecting them into the UserInterface class in order to finally pass it.
+simply expect `userInterface.getUniqueWordTable(text)` to produce a specific
+table at the start of development, and keep extracting responsibilities to
+different classes and injecting them into the UserInterface class in order to
+finally pass it.
 
 I completed this task following TDD and red-green-refactor principles. Each
 failing test was followed by an implementation, which then resulted in
