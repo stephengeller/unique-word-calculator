@@ -14,9 +14,9 @@ describe('arraySorter', () => {
         { word: 'thing', count: 10 }
       ];
       expect(arraySorter.sortArray(array, 'count')).toEqual([
-        { word: 'thing', count: 10 },
+        { word: 'world', count: 1 },
         { word: 'hello', count: 2 },
-        { word: 'world', count: 1 }
+        { word: 'thing', count: 10 }
       ]);
     });
   });

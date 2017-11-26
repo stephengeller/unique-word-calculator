@@ -2,7 +2,7 @@ const TextLoader = require('../src/textLoader');
 
 describe('TextLoader', () => {
   const fs = {
-    readFile: jest.fn(() => {
+    readFileSync: jest.fn(() => {
       return 'This is a sample text file';
     })
   };
@@ -35,7 +35,7 @@ describe('TextLoader', () => {
       textLoader.getText('../src/file');
     });
     it('calls the fs module to read a file', () => {
-      expect(fs.readFile).toHaveBeenCalled();
+      expect(fs.readFileSync).toHaveBeenCalled();
     });
     it('calls the path module to locate the file a file', () => {
       const srcFolderStringIndex = __dirname.indexOf('/test');

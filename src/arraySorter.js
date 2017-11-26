@@ -1,7 +1,7 @@
 class ArraySorter {
   sortArray(array, key) {
     return array.sort((a, b) => {
-      return b[key] - a[key];
+      return a[key] - b[key];
     });
   }
 }

@@ -24,11 +24,14 @@ class UserInterface {
   }
 
   renderTable(arrayOfWords) {
-    return arrayOfWords
+    const finalTable = arrayOfWords
       .map(object => {
         return this.lineFormatter.formatLine(object);
       })
       .join('\n');
+
+    console.log(finalTable);
+    return finalTable;
   }
 }
 
