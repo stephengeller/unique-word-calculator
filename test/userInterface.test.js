@@ -3,7 +3,7 @@ const UserInterface = require('../src/userInterface');
 describe('userInterface', () => {
   let userInterface;
   const lineFormatter = {
-    formatLine: jest.fn()
+    formatLinesToString: jest.fn()
   };
   const wordFrequencyProcessor = {
     processText: jest.fn(text => text.split(' '))
@@ -38,7 +38,7 @@ describe('userInterface', () => {
   describe('#renderTable', () => {
     it('calls the lineFormatter to render strings for the table', () => {
       userInterface.renderTable([1, 2, 3]);
-      expect(lineFormatter.formatLine).toHaveBeenCalled();
+      expect(lineFormatter.formatLinesToString).toHaveBeenCalled();
     });
   });
 });

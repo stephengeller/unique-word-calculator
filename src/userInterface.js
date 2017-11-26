@@ -24,12 +24,7 @@ class UserInterface {
   }
 
   renderTable(arrayOfWords) {
-    const finalTable = arrayOfWords
-      .map(object => {
-        return this.lineFormatter.formatLine(object);
-      })
-      .join('\n');
-
+    const finalTable = this.lineFormatter.formatLinesToString(arrayOfWords);
     console.log(finalTable);
     return finalTable;
   }

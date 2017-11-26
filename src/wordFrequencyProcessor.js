@@ -1,12 +1,26 @@
 const TextFormatter = require('./textFormatter');
+const PrimeChecker = require('./primeChecker');
 
 class WordFrequencyProcessor {
-  constructor(textFormatter = new TextFormatter()) {
+  constructor(
+    textFormatter = new TextFormatter(),
+    primeChecker = new PrimeChecker()
+  ) {
     this.textFormatter = textFormatter;
+    this.primeChecker = primeChecker;
   }
   processText(text) {
     const formattedWordArray = this.textFormatter.formatText(text);
-    return this.addWordsScore(formattedWordArray);
+    const arrayOfWords = this.addWordsScore(formattedWordArray);
+    return this.checkForPrimes(arrayOfWords);
+  }
+
+  checkForPrimes(arrayOfWords) {
+    const arrayWithPrimes = arrayOfWords.map(word => {
+      word['isPrime'] = this.primeChecker.checkIfPrime(word.count);
+      return word;
+    });
+    return arrayWithPrimes;
   }
 
   addWordsScore(array) {
