@@ -1,6 +1,10 @@
 class TextFormatter {
   splitText(text) {
-    return text.toLowerCase().split(' ');
+    const array = text.toLowerCase().split(' ');
+    if (array[0] === '') {
+      array.splice(0, 1);
+    }
+    return array;
   }
 
   removePunctuation(text) {

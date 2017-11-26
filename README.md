@@ -63,6 +63,22 @@ see all of the beautiful (passing) tests.
 * 95% test coverage (100% on all besides a callback function within the
   TextLoader class, which I don't know how to test the different outcomes yet.)
 
+## My approach
+
+After establishing a feature test that laid out how I wanted my app to work, my
+approach to this was to first set up behaviours that would always stay the same.
+This involved creating something that could detect if any number was prime,
+something that could format text into an array of lowercase words, and something
+that could actually get text from another file.
+
+Once this was complete, I then built the more subjective operations for the app,
+such as sorting the table by word frequency, rendering each array object as a
+string and generally formatting the table into a nice display.
+
+I completed this task following TDD and red-green-refactor principles. Each
+failing test was followed by an implementation, which then resulted in
+refactoring of functions either into other smaller functions or classes.
+
 ## Classes
 
 #### `TextLoader`
@@ -131,5 +147,12 @@ find at least 20,000 prime numbers.
 * Test the behaviour of the callback function in TextLoader effectively. This is
   currently untested, meaning it is impossible to predict behaviours within the
   function itself.
+* Test logging to the console! I only 50% achieved this through dependency
+  injection, and would like to work on this further.
 * Sort the table further, so that words with the same count are sorted
   alphabetically
+
+## Note on Git Commits
+
+* I was unsure whether this project was going to make it onto GitHub, resulting
+  in fewer regular commits than is typical in my projects.

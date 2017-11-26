@@ -8,8 +8,8 @@ describe('LineFormatter', () => {
   describe('formatLine', () => {
     it('returns a string of the capitalised object word, count and prime ', () => {
       expect(
-        lineFormatter.formatLine({ word: 'hello', count: 4, isPrime: false })
-      ).toEqual('HELLO | 4');
+        lineFormatter.formatLine({ word: 'hello', count: 4, isPrime: true })
+      ).toEqual('HELLO | 4 | Prime!');
     });
   });
 

@@ -22,6 +22,11 @@ describe('arraySorter', () => {
         { word: 'thing', count: 10 }
       ]);
     });
+    it('raises error if key does not exist', () => {
+      expect(() => {
+        arraySorter.sortArray(array, 'thing');
+      }).toThrowError('that key does not exist');
+    });
     it('can sort with any numerical key', () => {
       let array = [
         { word: 'hello', randomKey: 211 },

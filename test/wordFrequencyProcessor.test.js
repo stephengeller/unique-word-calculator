@@ -21,6 +21,9 @@ describe('wordFrequencyProcessor', () => {
         wordFrequencyProcessor.addWordsScore(['hello', 'hello', 'world'])
       ).toEqual([{ word: 'hello', count: 2 }, { word: 'world', count: 1 }]);
     });
+    it('empty arrays return empty arrays', () => {
+      expect(wordFrequencyProcessor.addWordsScore([])).toEqual([]);
+    });
   });
 
   describe('#processText', () => {

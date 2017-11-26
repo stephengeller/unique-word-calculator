@@ -26,7 +26,14 @@ describe('TextFormatter', () => {
   describe('#formatTextToArray', () => {
     it('returns lowercase array without punctuation', () => {
       expect(
-        textFormatter.formatTextToArray('HelLLooo!! ;;W.orl,lldD')
+        textFormatter.formatTextToArray('HelLLooo!!      ;;W.orl,lldD')
+      ).toEqual(['helllooo', 'worllldd']);
+    });
+    it('removes whitespace before first word', () => {
+      expect(
+        textFormatter.formatTextToArray(
+          '                HelLLooo!!      ;;W.orl,lldD'
+        )
       ).toEqual(['helllooo', 'worllldd']);
     });
   });
