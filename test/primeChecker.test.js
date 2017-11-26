@@ -6,10 +6,6 @@ describe('PrimeChecker', () => {
     primeChecker = new PrimeChecker();
   });
 
-  it('exists', () => {
-    expect(PrimeChecker).toBeDefined();
-  });
-
   describe('#checkIfPrime', () => {
     it('returns true if number is prime', () => {
       expect(primeChecker.checkIfPrime(5)).toBe(true);
