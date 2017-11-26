@@ -2,8 +2,6 @@
 
 A command-line app.
 
-![picture]()
-
 ## How to install
 
 Make sure you have [Node.js](https://nodejs.org/en/) installed! Once this file
