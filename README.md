@@ -25,23 +25,23 @@ For example: In your terminal, within the repository directory:
 ```bash
 $ node runSample.js
 ...  # (the table continues for longer in the actual app)
-PETER | 100
+ PETER | 100
 MOTHER | 111
-HAD | 113 | Prime!
-THAT | 114
-HE | 120
- I | 124
-THEY | 126
-YOU | 157 | Prime!
-IN | 163 | Prime!
-WAS | 205
-IT | 208
-OF | 216
-SAID | 221
- A | 286
-TO | 346
-AND | 471
-THE | 707
+   HAD | 113 | Prime!
+  THAT | 114
+    HE | 120
+     I | 124
+  THEY | 126
+   YOU | 157 | Prime!
+    IN | 163 | Prime!
+   WAS | 205
+    IT | 208
+    OF | 216
+  SAID | 221
+     A | 286
+    TO | 346
+   AND | 471
+   THE | 707
 ```
 
 ## How to test
