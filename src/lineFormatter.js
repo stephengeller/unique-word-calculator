@@ -1,6 +1,8 @@
 class LineFormatter {
   formatLine(object) {
-    return `${object.word} | ${object.count} | ${object.isPrime}`;
+    return `${object.word.toUpperCase()} | ${object.count}${
+      object.isPrime ? ' | Prime!' : ''
+    }`;
   }
 
   formatLinesToString(array) {

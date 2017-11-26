@@ -11,6 +11,9 @@ describe('userInterface', () => {
   const arraySorter = {
     sortArray: jest.fn(element => element)
   };
+  const logger = {
+    log: jest.fn(element => element)
+  };
   beforeEach(() => {
     userInterface = new UserInterface(
       lineFormatter,
@@ -27,6 +30,14 @@ describe('userInterface', () => {
     });
     it('calls the wordFrequencyProcessor to process the text into an array', () => {
       expect(wordFrequencyProcessor.processText).toHaveBeenCalled();
+    });
+    it('calls the arraySorter through sortWordsByCount function', () => {
+      userInterface.sortWordsByCount([1, 2, 3]);
+      expect(arraySorter.sortArray).toHaveBeenCalled();
+    });
+    it('calls the lineFormatter through renderTable function', () => {
+      userInterface.renderTable([1, 2, 3]);
+      expect(lineFormatter.formatLinesToString).toHaveBeenCalled();
     });
   });
   describe('#sortWordsByCount', () => {

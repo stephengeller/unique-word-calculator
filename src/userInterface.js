@@ -6,11 +6,13 @@ class UserInterface {
   constructor(
     lineFormatter = new LineFormatter(),
     wordFrequencyProcessor = new WordFrequencyProcessor(),
-    arraySorter = new ArraySorter()
+    arraySorter = new ArraySorter(),
+    logger = console
   ) {
     this.lineFormatter = lineFormatter;
     this.wordFrequencyProcessor = wordFrequencyProcessor;
     this.arraySorter = arraySorter;
+    this.logger = logger;
   }
 
   processText(string) {
@@ -25,7 +27,7 @@ class UserInterface {
 
   renderTable(arrayOfWords) {
     const finalTable = this.lineFormatter.formatLinesToString(arrayOfWords);
-    console.log(finalTable);
+    this.logger.log(finalTable);
     return finalTable;
   }
 }

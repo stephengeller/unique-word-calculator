@@ -32,13 +32,13 @@ describe('TextLoader', () => {
 
   describe('#getText', () => {
     beforeEach(() => {
-      textLoader.getText(__dirname, 'src/file');
+      textLoader.getText(__dirname, 'path/to/file');
     });
     it('calls the fs module to read a file', () => {
       expect(fs.readFileSync).toHaveBeenCalled();
     });
     it('calls the path module to locate the file a file', () => {
-      expect(path.join).toHaveBeenCalledWith(__dirname, 'src/file');
+      expect(path.join).toHaveBeenCalledWith(__dirname, 'path/to/file');
     });
   });
 

@@ -6,10 +6,10 @@ describe('LineFormatter', () => {
     lineFormatter = new LineFormatter();
   });
   describe('formatLine', () => {
-    it('returns a string of the object word,count and prime ', () => {
+    it('returns a string of the capitalised object word, count and prime ', () => {
       expect(
         lineFormatter.formatLine({ word: 'hello', count: 4, isPrime: false })
-      ).toEqual('hello | 4 | false');
+      ).toEqual('HELLO | 4');
     });
   });
 
@@ -20,7 +20,7 @@ describe('LineFormatter', () => {
           { word: 'hello', count: 4, isPrime: false },
           { word: 'world', count: 3, isPrime: true }
         ])
-      ).toEqual('hello | 4 | false\n' + 'world | 3 | true');
+      ).toEqual('HELLO | 4\n' + 'WORLD | 3 | Prime!');
     });
   });
 });

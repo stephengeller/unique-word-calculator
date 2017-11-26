@@ -3,11 +3,11 @@ const UserInterface = require('../src/userInterface');
 describe('feature', () => {
   it('for a block of text, it returns a table of words with their frequency', () => {
     const finalTable =
-      'is | 1 | false\n' +
-      'so | 1 | false\n' +
-      'world | 2 | true\n' +
-      'hello | 3 | true\n' +
-      'cool | 4 | false';
+      'IS | 1\n' +
+      'SO | 1\n' +
+      'WORLD | 2 | Prime!\n' +
+      'HELLO | 3 | Prime!\n' +
+      'COOL | 4';
     const sampleText =
       'Hello world; hello! H-ello world is so cool, cool cool cool.';
     const userInterface = new UserInterface();
