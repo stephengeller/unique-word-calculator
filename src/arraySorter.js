@@ -1,9 +1,9 @@
 class ArraySorter {
   sortArray(array, key) {
-    if (array[0][key] === undefined) {
-      throw new Error('that key does not exist');
-    }
     return array.sort((a, b) => {
+      if (a[key] === undefined || b[key] === undefined) {
+        throw new Error('that key does not exist');
+      }
       return a[key] - b[key];
     });
   }
