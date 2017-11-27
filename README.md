@@ -150,6 +150,11 @@ find at least 20,000 prime numbers.
 
 ## What I'd do if I had more time
 
+* Fix a bug where some words are combined when using regex to remove
+  punctuation.
+  * I expect this is due to the removePunctuation function behaving unexpectedly
+    and possibly combining words at the end of a paragraph and the first
+    sentence in the next one.
 * Further refactor classes:
   * For example, the UserInterface and WordFrequencyProcessor classes are quite
     dense and depend on stringing together functions from other classes.
